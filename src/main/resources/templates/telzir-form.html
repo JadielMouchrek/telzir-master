@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<title>Contact V1</title>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<!--===============================================================================================-->
+	<link rel="icon" type="image/png" href="../static/images/icons/favicon.ico" />
+	<!--===============================================================================================-->
+	<link rel="stylesheet" type="text/css" href="../static/vendor/bootstrap/css/bootstrap.min.css" th:href="@{/css/bootstrap.min.css}">
+	<!--===============================================================================================-->
+	<link rel="stylesheet" type="text/css" href="../static/fonts/font-awesome-4.7.0/css/font-awesome.min.css" th:href="@{/css/font-awesome.min.css}">
+	<!--===============================================================================================-->
+	<link rel="stylesheet" type="text/css" href="../static/vendor/animate/animate.css" th:href="@{/css/animate.css}">
+	<!--===============================================================================================-->
+	<link rel="stylesheet" type="text/css" href="../static/vendor/css-hamburgers/hamburgers.min.css" th:href="@{/css/hamburgers.min.css}">
+	<!--===============================================================================================-->
+	<link rel="stylesheet" type="text/css" href="../static/vendor/select2/select2.min.css" th:href="@{/css/select2.min.css}">
+	<!--===============================================================================================-->
+	<link rel="stylesheet" type="text/css" href="../static/css/util.css" th:href="@{/css/main.css}">
+	<link rel="stylesheet" type="text/css" href="../static/css/main.css" th:href="@{/css/main.css}">
+	<link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+	<!--===============================================================================================-->
+</head>
+
+<body>
+
+<div class="contact1">
+		<div class="container-contact1">
+			<div class="contact1-pic js-tilt" data-tilt>
+				<img src="images/img-02.png" alt="IMG">
+			</div>
+
+			<form class="contact1-form validate-form" action="#" th:action="@{/telzir-form}" th:object="${formulario}"
+				method="post">
+				<span class="contact1-form-title">
+					Calcule com o nosso plano!
+				</span>
+				<div class="wrap-input1 validate-input" data-validate="Message is required">
+					<div class="select-container">
+						<select id="dddorigem" th:field="*{dddOrigem}" required>
+							<option value="">Selecione o ddd de origem</option>
+							<option th:each="cidade : ${formulario.cidades}" th:value="${cidade.getDdd()}" th:text="${cidade.getDdd()}"></option>
+						</select>
+					</div>
+				</div>
+				<div class="wrap-input1 validate-input" data-validate="Message is required">
+					<div class="select-container">
+						<select id="ddddestino" th:field="*{dddDestino}" required>
+							<option value="">Selecione o ddd de destino</option>
+							<option th:each="cidade : ${formulario.cidades}" th:value="${cidade.getDdd()}" th:text="${cidade.getDdd()}"></option>
+						</select>
+					</div>
+				</div>
+				<div class="wrap-input1 validate-input" data-validate="Message is required">
+					<div class="select-container">
+						<select id="plano" th:field="*{plano}" required>
+							<option value="">Selecione o plano</option>
+							<option th:each="plano : ${formulario.planos}" th:value="${plano.getDescricao()}" th:text="${plano.getDescricao()}"></option>
+						</select>
+					</div>
+				</div>
+				<div class="wrap-input1 validate-input" data-validate="Message is required">
+					<input class="input1" type="text" placeholder="digite o tempo" th:field="*{tempoMinutos}" required/>
+				</div>
+
+				<div class="container-contact1-form-btn" style="width:100%">
+					<button class="contact1-form-btn" type="submit" value="Submit" style="width:100%">
+						<span>
+							
+							<i class="fa fa-long-arrow-right" aria-hidden="true">Calcular</i>
+						</span>
+					</button>
+				</div>
+			</form>
+		</div>
+	</div>
+
+
+
+	<!--===============================================================================================-->
+	<script src="../static/vendor/jquery/jquery-3.2.1.min.js"></script>
+	<!--===============================================================================================-->
+	<script src="../static/vendor/bootstrap/js/popper.js"></script>
+	<script src="../static/vendor/bootstrap/js/bootstrap.min.js"></script>
+	<!--===============================================================================================-->
+	<script src="../static/vendor/select2/select2.min.js"></script>
+	<!--===============================================================================================-->
+	<script src="../static/vendor/tilt/tilt.jquery.min.js"></script>
+
+	<!--===============================================================================================-->
+	<script src="../static/js/main.js"></script>
+
+</body>
+
+</html>

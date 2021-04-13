@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+<title>Contact V1</title>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<!--===============================================================================================-->
+<link rel="icon" type="image/png"
+	href="../static/images/icons/favicon.ico" />
+<!--===============================================================================================-->
+<link rel="stylesheet" type="text/css"
+	href="../static/vendor/bootstrap/css/bootstrap.min.css"
+	th:href="@{/css/bootstrap.min.css}">
+<!--===============================================================================================-->
+<link rel="stylesheet" type="text/css"
+	href="../static/fonts/font-awesome-4.7.0/css/font-awesome.min.css"
+	th:href="@{/css/font-awesome.min.css}">
+<!--===============================================================================================-->
+<link rel="stylesheet" type="text/css"
+	href="../static/vendor/animate/animate.css"
+	th:href="@{/css/animate.css}">
+<!--===============================================================================================-->
+<link rel="stylesheet" type="text/css"
+	href="../static/vendor/css-hamburgers/hamburgers.min.css"
+	th:href="@{/css/hamburgers.min.css}">
+<!--===============================================================================================-->
+<link rel="stylesheet" type="text/css"
+	href="../static/vendor/select2/select2.min.css"
+	th:href="@{/css/select2.min.css}">
+<!--===============================================================================================-->
+<link rel="stylesheet" type="text/css" href="../static/css/util.css"
+	th:href="@{/css/main.css}">
+<link rel="stylesheet" type="text/css" href="../static/css/main.css"
+	th:href="@{/css/main.css}">
+<link href="https://fonts.googleapis.com/icon?family=Material+Icons"
+	rel="stylesheet">
+<!--===============================================================================================-->
+</head>
+
+<body>
+
+	<div class="contact1">
+		<div class="container-contact1">
+			<div class="contact1-pic js-tilt" data-tilt>
+				<img src="images/img-02.png" alt="IMG">
+			</div>
+			<div class="contact1-form validate-form">
+
+				<div class="wrap-input1 validate-input"
+					data-validate="Message is required">
+					<span>Com plano: R$</span>
+					<span th:text="${comPlano}" style="font-weight: bold;"></span>
+				</div>
+
+				<div class="wrap-input1 validate-input"
+					data-validate="Message is required" style="align-items: center;">
+					<span>Sem plano: R$</span>
+					<span th:text="${semPlano}" style="font-weight: bold;"></span>
+				</div>
+
+
+				<button class="contact1-form-btn" style="width:100%">
+					<span> <a th:href="@{'/telzir-form'}"
+						style="text-decoration: none; color: #FFF">voltar</a>
+					</span>
+				</button>
+			</div>
+		</div>
+	</div>
+
+
+
+	<!--===============================================================================================-->
+	<script src="../static/vendor/jquery/jquery-3.2.1.min.js"></script>
+	<!--===============================================================================================-->
+	<script src="../static/vendor/bootstrap/js/popper.js"></script>
+	<script src="../static/vendor/bootstrap/js/bootstrap.min.js"></script>
+	<!--===============================================================================================-->
+	<script src="../static/vendor/select2/select2.min.js"></script>
+	<!--===============================================================================================-->
+	<script src="../static/vendor/tilt/tilt.jquery.min.js"></script>
+
+
+</body>
+
+</html>
